@@ -20,7 +20,14 @@ const jwtOptions = {
 passport.use(new passportJWT.Strategy(jwtOptions, (payload, done) => {
     // Perform authorization logic here
     done(null, payload);
-}));
+})
+);
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+});
 
 // Define calculator routes
 app.get('/add/:a/:b', passport.authenticate('jwt', { session: false }), (req, res) => {

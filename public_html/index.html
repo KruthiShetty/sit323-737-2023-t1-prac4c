@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <h1>Calculator </h1>
+    <p>Enter your credentials to log in:</p>
+    <form method="POST" action="/login">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <button type="submit">Log in</button>
+    </form>
+    <p>Enter the parameters to perform operations:</p>
+    <form method="GET" action="/add">
+        <label for="a">First number:</label>
+        <input type="number" name="a" id="a" required>
+        <label for="b">Second number:</label>
+        <input type="number" name="b" id="b" required>
+        <button type="submit">Add</button>
+    </form>
+    <form method="GET" action="/subtract">
+        <label for="a">First number:</label>
+        <input type="number" name="a" id="a" required>
+        <label for="b">Second number:</label>
+        <input type="number" name="b" id="b" required>
+        <button type="submit">Subtract</button>
+    </form>
+    <form method="GET" action="/multiply">
+        <label for="a">First number:</label>
+        <input type="number" name="a" id="a" required>
+        <label for="b">Second number:</label>
+        <input type="number" name="b" id="b" required>
+        <button type="submit">Multiply</button>
+    </form>
+    <form method="GET" action="/divide">
+        <label for="a">First number:</label>
+        <input type="number" name="a" id="a" required>
+        <label for="b">Second number:</label>
+        <input type="number" name="b" id="b" required>
+        <button type="submit">Divide</button>
+    </form>
+</body>
+
+</html>
